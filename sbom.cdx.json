@@ -1,0 +1,158 @@
+{
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.5",
+  "serialNumber": "urn:uuid:9a9f7ae3-494c-52c5-a7ec-fe55d3f66314",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2026-10-12T06:30:54Z",
+    "component": {
+      "type": "application",
+      "name": "ATOMSPACE",
+      "version": "3c2c8c18ab4c",
+      "bom-ref": "pkg:generic/anticloud/ATOMSPACE@3c2c8c18ab4c",
+      "purl": "pkg:generic/anticloud/ATOMSPACE@3c2c8c18ab4c",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ]
+    },
+    "properties": [
+      {
+        "name": "anticloud:source-commit",
+        "value": "3c2c8c18ab4c5c16660f350d8e23d7dc39e738de"
+      },
+      {
+        "name": "anticloud:source-url",
+        "value": ""
+      },
+      {
+        "name": "anticloud:tier",
+        "value": "tier-agent"
+      }
+    ]
+  },
+  "components": [
+    {
+      "type": "library",
+      "name": "numpy",
+      "version": ">=1.14",
+      "purl": "pkg:pypi/numpy@1.14",
+      "bom-ref": "pypi/numpy@>=1.14"
+    },
+    {
+      "type": "library",
+      "name": "scipy",
+      "version": ">=1.1.0",
+      "purl": "pkg:pypi/scipy@1.1.0",
+      "bom-ref": "pypi/scipy@>=1.1.0"
+    },
+    {
+      "type": "library",
+      "name": "networkx",
+      "version": ">=2.2",
+      "purl": "pkg:pypi/networkx@2.2",
+      "bom-ref": "pypi/networkx@>=2.2"
+    },
+    {
+      "type": "library",
+      "name": "scikit_learn",
+      "version": ">=0.20",
+      "purl": "pkg:pypi/scikit-learn@0.20",
+      "bom-ref": "pypi/scikit_learn@>=0.20"
+    },
+    {
+      "type": "library",
+      "name": "matplotlib",
+      "version": ">=2.2",
+      "purl": "pkg:pypi/matplotlib@2.2",
+      "bom-ref": "pypi/matplotlib@>=2.2"
+    },
+    {
+      "type": "library",
+      "name": "pandas",
+      "version": ">=0.24",
+      "purl": "pkg:pypi/pandas@0.24",
+      "bom-ref": "pypi/pandas@>=0.24"
+    },
+    {
+      "type": "library",
+      "name": "mplleaflet",
+      "version": "==0.0.5",
+      "purl": "pkg:pypi/mplleaflet@0.0.5",
+      "bom-ref": "pypi/mplleaflet@==0.0.5"
+    },
+    {
+      "type": "library",
+      "name": "gensim",
+      "version": ">=4.0.0",
+      "purl": "pkg:pypi/gensim@4.0.0",
+      "bom-ref": "pypi/gensim@>=4.0.0"
+    },
+    {
+      "type": "library",
+      "name": "pytest",
+      "version": "==5.3.1",
+      "purl": "pkg:pypi/pytest@5.3.1",
+      "bom-ref": "pypi/pytest@==5.3.1"
+    },
+    {
+      "type": "library",
+      "name": "pytest-benchmark",
+      "version": ">=3.1",
+      "purl": "pkg:pypi/pytest-benchmark@3.1",
+      "bom-ref": "pypi/pytest-benchmark@>=3.1"
+    },
+    {
+      "type": "library",
+      "name": "pytest-cov",
+      "version": ">=2.6.0",
+      "purl": "pkg:pypi/pytest-cov@2.6.0",
+      "bom-ref": "pypi/pytest-cov@>=2.6.0"
+    },
+    {
+      "type": "library",
+      "name": "coverage",
+      "version": ">=4.4,<5.0",
+      "purl": "pkg:pypi/coverage@4.4,<5.0",
+      "bom-ref": "pypi/coverage@>=4.4,<5.0"
+    },
+    {
+      "type": "library",
+      "name": "black",
+      "version": ">=19.3b0",
+      "purl": "pkg:pypi/black@19.3b0",
+      "bom-ref": "pypi/black@>=19.3b0"
+    },
+    {
+      "type": "library",
+      "name": "nbconvert",
+      "version": ">=5.5.0",
+      "purl": "pkg:pypi/nbconvert@5.5.0",
+      "bom-ref": "pypi/nbconvert@>=5.5.0"
+    },
+    {
+      "type": "library",
+      "name": "treon",
+      "version": ">=0.1.2",
+      "purl": "pkg:pypi/treon@0.1.2",
+      "bom-ref": "pypi/treon@>=0.1.2"
+    },
+    {
+      "type": "library",
+      "name": "papermill",
+      "version": ">=2.0.0",
+      "purl": "pkg:pypi/papermill@2.0.0",
+      "bom-ref": "pypi/papermill@>=2.0.0"
+    },
+    {
+      "type": "library",
+      "name": "commonmark",
+      "version": "==0.9.1",
+      "purl": "pkg:pypi/commonmark@0.9.1",
+      "bom-ref": "pypi/commonmark@==0.9.1"
+    }
+  ]
+}

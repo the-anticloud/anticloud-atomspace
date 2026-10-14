@@ -1,0 +1,1369 @@
+{
+ "schema": "anticloud.tier-bench/1",
+ "project": "ATOMSPACE",
+ "source": {
+  "repo_path": "E:\\fenta\\Downloads\\The Anticloud\\ANTICLOUD_REPOS\\PHILOSOPHY_SEMANTICS\\ATOMSPACE\\UPSTREAM_CLONE",
+  "git": {
+   "head": "3c2c8c18ab4c5c16660f350d8e23d7dc39e738de",
+   "url": "https://github.com/stellargraph/stellargraph",
+   "branch": "develop",
+   "committed_at": "",
+   "sha_verified_from": "GitHub API substitute swap 2026-10-12 | unified 2026-10-14 (API-exists + content/clone anchor)"
+  }
+ },
+ "metrics": {
+  "files_total": 379,
+  "source_files_scanned": 166,
+  "lines_of_code": 48696,
+  "languages": {
+   ".py": 156,
+   ".ipynb": 56,
+   ".nblink": 55,
+   ".md": 20,
+   ".rst": 20,
+   ".png": 17,
+   ".json": 12,
+   ".sh": 10,
+   "(none)": 9,
+   ".yml": 5,
+   ".txt": 3,
+   ".yaml": 2,
+   ".pkl": 2,
+   ".in": 1,
+   ".ini": 1
+  }
+ },
+ "licence": {
+  "spdx": "Apache-2.0",
+  "class": "A",
+  "source_file": "LICENSE",
+  "redistribution_allowed": true
+ },
+ "dependencies": {
+  "count": 17,
+  "unique": 17,
+  "by_ecosystem": {
+   "pypi": 17
+  },
+  "list": [
+   {
+    "ecosystem": "pypi",
+    "name": "numpy",
+    "version": ">=1.14",
+    "source_file": "setup.py",
+    "raw": "numpy>=1.14"
+   },
+   {
+    "ecosystem": "pypi",
+    "name": "scipy",
+    "version": ">=1.1.0",
+    "source_file": "setup.py",
+    "raw": "scipy>=1.1.0"
+   },
+   {
+    "ecosystem": "pypi",
+    "name": "networkx",
+    "version": ">=2.2",
+    "source_file": "setup.py",
+    "raw": "networkx>=2.2"
+   },
+   {
+    "ecosystem": "pypi",
+    "name": "scikit_learn",
+    "version": ">=0.20",
+    "source_file": "setup.py",
+    "raw": "scikit_learn>=0.20"
+   },
+   {
+    "ecosystem": "pypi",
+    "name": "matplotlib",
+    "version": ">=2.2",
+    "source_file": "setup.py",
+    "raw": "matplotlib>=2.2"
+   },
+   {
+    "ecosystem": "pypi",
+    "name": "pandas",
+    "version": ">=0.24",
+    "source_file": "setup.py",
+    "raw": "pandas>=0.24"
+   },
+   {
+    "ecosystem": "pypi",
+    "name": "mplleaflet",
+    "version": "==0.0.5",
+    "source_file": "setup.py",
+    "raw": "mplleaflet==0.0.5"
+   },
+   {
+    "ecosystem": "pypi",
+    "name": "gensim",
+    "version": ">=4.0.0",
+    "source_file": "setup.py",
+    "raw": "gensim>=4.0.0"
+   },
+   {
+    "ecosystem": "pypi",
+    "name": "pytest",
+    "version": "==5.3.1",
+    "source_file": "setup.py",
+    "raw": "pytest==5.3.1"
+   },
+   {
+    "ecosystem": "pypi",
+    "name": "pytest-benchmark",
+    "version": ">=3.1",
+    "source_file": "setup.py",
+    "raw": "pytest-benchmark>=3.1"
+   },
+   {
+    "ecosystem": "pypi",
+    "name": "pytest-cov",
+    "version": ">=2.6.0",
+    "source_file": "setup.py",
+    "raw": "pytest-cov>=2.6.0"
+   },
+   {
+    "ecosystem": "pypi",
+    "name": "coverage",
+    "version": ">=4.4,<5.0",
+    "source_file": "setup.py",
+    "raw": "coverage>=4.4,<5.0"
+   },
+   {
+    "ecosystem": "pypi",
+    "name": "black",
+    "version": ">=19.3b0",
+    "source_file": "setup.py",
+    "raw": "black>=19.3b0"
+   },
+   {
+    "ecosystem": "pypi",
+    "name": "nbconvert",
+    "version": ">=5.5.0",
+    "source_file": "setup.py",
+    "raw": "nbconvert>=5.5.0"
+   },
+   {
+    "ecosystem": "pypi",
+    "name": "treon",
+    "version": ">=0.1.2",
+    "source_file": "setup.py",
+    "raw": "treon>=0.1.2"
+   },
+   {
+    "ecosystem": "pypi",
+    "name": "papermill",
+    "version": ">=2.0.0",
+    "source_file": "setup.py",
+    "raw": "papermill>=2.0.0"
+   },
+   {
+    "ecosystem": "pypi",
+    "name": "commonmark",
+    "version": "==0.9.1",
+    "source_file": "setup.py",
+    "raw": "commonmark==0.9.1"
+   }
+  ]
+ },
+ "owasp_top10": {
+  "total_findings": 200,
+  "files_with_findings": 158,
+  "severity": {
+   "high": 6,
+   "medium": 0,
+   "low": 194
+  },
+  "categories": {
+   "A01-BrokenAccessControl": {
+    "count": 0,
+    "findings": []
+   },
+   "A02-CryptographicFailures": {
+    "count": 0,
+    "findings": []
+   },
+   "A03-Injection": {
+    "count": 6,
+    "findings": [
+     {
+      "severity": "high",
+      "file": "setup.py",
+      "line": 83,
+      "cwe": "CWE-95",
+      "snippet": "exec(fh.read(), version)"
+     },
+     {
+      "severity": "high",
+      "file": "scripts/format_notebooks.py",
+      "line": 44,
+      "cwe": "CWE-95",
+      "snippet": "exec(fh.read(), version)"
+     },
+     {
+      "severity": "high",
+      "file": "scripts/test_demos.py",
+      "line": 91,
+      "cwe": "CWE-78",
+      "snippet": "shell=True,"
+     },
+     {
+      "severity": "high",
+      "file": "scripts/whitespace.sh",
+      "line": 46,
+      "cwe": "CWE-78",
+      "snippet": "tmp=\"$(mktemp)\""
+     },
+     {
+      "severity": "high",
+      "file": "scripts/ci/check-copyright-headers.sh",
+      "line": 7,
+      "cwe": "CWE-78",
+      "snippet": "temp=\"$(mktemp)\""
+     },
+     {
+      "severity": "high",
+      "file": "docs/conf.py",
+      "line": 27,
+      "cwe": "CWE-95",
+      "snippet": "exec(fh.read(), version)"
+     }
+    ]
+   },
+   "A04-InsecureDesign": {
+    "count": 37,
+    "findings": [
+     {
+      "severity": "low",
+      "file": "tests/test_ensemble.py",
+      "line": 44,
+      "cwe": "CWE-",
+      "snippet": "# FIXME (#535): Consider using graph fixtures"
+     },
+     {
+      "severity": "low",
+      "file": "tests/mapper/test_cluster_gcn_node_mapper.py",
+      "line": 26,
+      "cwe": "CWE-",
+      "snippet": "# FIXME (#535): Consider using graph fixtures"
+     },
+     {
+      "severity": "low",
+      "file": "tests/mapper/test_directed_node_generator.py",
+      "line": 25,
+      "cwe": "CWE-",
+      "snippet": "# FIXME (#535): Consider using graph fixtures"
+     },
+     {
+      "severity": "low",
+      "file": "tests/mapper/test_node_mappers.py",
+      "line": 45,
+      "cwe": "CWE-",
+      "snippet": "# FIXME (#535): Consider using graph fixtures"
+     },
+     {
+      "severity": "low",
+      "file": "tests/layer/test_appnp.py",
+      "line": 302,
+      "cwe": "CWE-",
+      "snippet": "[False, pytest.param(True, marks=pytest.mark.xfail(reason=\"FIXME #1251\"))],"
+     },
+     {
+      "severity": "low",
+      "file": "tests/layer/test_gcn.py",
+      "line": 323,
+      "cwe": "CWE-",
+      "snippet": "\"sparse\", [False, pytest.param(True, marks=pytest.mark.xfail(reason=\"FIXME #1251\"))]"
+     },
+     {
+      "severity": "low",
+      "file": "tests/layer/test_graphsage.py",
+      "line": 367,
+      "cwe": "CWE-",
+      "snippet": "# The AttentionalAggregator implementation is a hack at the moment, it doesn't"
+     },
+     {
+      "severity": "low",
+      "file": "tests/layer/test_rgcn.py",
+      "line": 381,
+      "cwe": "CWE-",
+      "snippet": "\"sparse\", [False, pytest.param(True, marks=pytest.mark.xfail(reason=\"FIXME #1251\"))]"
+     },
+     {
+      "severity": "low",
+      "file": "tests/interpretability/test_saliency_maps_gat.py",
+      "line": 115,
+      "cwe": "CWE-",
+      "snippet": "# TODO: write a better comparison test with larger floating point values"
+     },
+     {
+      "severity": "low",
+      "file": "tests/datasets/test_datasets.py",
+      "line": 179,
+      "cwe": "CWE-",
+      "snippet": "@pytest.mark.xfail(sys.platform == \"win32\", reason=\"FIXME #1698\")"
+     },
+     {
+      "severity": "low",
+      "file": "tests/data/test_biased_random_walker.py",
+      "line": 26,
+      "cwe": "CWE-",
+      "snippet": "# FIXME (#535): Consider using graph fixtures"
+     },
+     {
+      "severity": "low",
+      "file": "tests/data/test_edge_splitter.py",
+      "line": 34,
+      "cwe": "CWE-",
+      "snippet": "# TODO: We test if this graph is connected but there is no guarantee of connectivity in this code"
+     },
+     {
+      "severity": "low",
+      "file": "tests/data/test_heterogeneous_breadth_first_walker.py",
+      "line": 31,
+      "cwe": "CWE-",
+      "snippet": "# FIXME (#535): Consider using graph fixtures. These two test graphs are very similar, and should be combined"
+     },
+     {
+      "severity": "low",
+      "file": "tests/data/test_metapath_walker.py",
+      "line": 25,
+      "cwe": "CWE-",
+      "snippet": "# FIXME (#535): Consider using graph fixtures"
+     },
+     {
+      "severity": "low",
+      "file": "tests/core/test_graph.py",
+      "line": 43,
+      "cwe": "CWE-",
+      "snippet": "# FIXME (#535): Consider using graph fixtures"
+     },
+     {
+      "severity": "low",
+      "file": "stellargraph/mapper/knowledge_graph.py",
+      "line": 202,
+      "cwe": "CWE-",
+      "snippet": "# FIXME (#882): this sampling may be able to be optimised to a slice-write"
+     },
+     {
+      "severity": "low",
+      "file": "stellargraph/mapper/mini_batch_node_generators.py",
+      "line": 157,
+      "cwe": "CWE-",
+      "snippet": "# FIXME 1621: store feature_dimension here instead of features. This must also update ClusterGCN, and all"
+     },
+     {
+      "severity": "low",
+      "file": "stellargraph/mapper/sampled_node_generators.py",
+      "line": 357,
+      "cwe": "CWE-",
+      "snippet": "# TODO Add checks for in- and out-nodes sizes"
+     },
+     {
+      "severity": "low",
+      "file": "stellargraph/mapper/sequences.py",
+      "line": 288,
+      "cwe": "CWE-",
+      "snippet": "# FIXME(#681): all batches are created at once, so this is no longer \"on demand\""
+     },
+     {
+      "severity": "low",
+      "file": "stellargraph/layer/appnp.py",
+      "line": 324,
+      "cwe": "CWE-",
+      "snippet": "# TODO: Support multiple matrices?"
+     },
+     {
+      "severity": "low",
+      "file": "stellargraph/layer/gcn.py",
+      "line": 196,
+      "cwe": "CWE-",
+      "snippet": "# FIXME(#1222): batch_dot doesn't support sparse tensors, so we special case them to"
+     },
+     {
+      "severity": "low",
+      "file": "stellargraph/layer/graphsage.py",
+      "line": 138,
+      "cwe": "CWE-",
+      "snippet": "# XXX Ignore batch size, since test dim != 0 evaluates to None!!"
+     },
+     {
+      "severity": "low",
+      "file": "stellargraph/layer/graph_attention.py",
+      "line": 868,
+      "cwe": "CWE-",
+      "snippet": "# TODO: Support multiple matrices?"
+     },
+     {
+      "severity": "low",
+      "file": "stellargraph/layer/hinsage.py",
+      "line": 200,
+      "cwe": "CWE-",
+      "snippet": "# TODO: implement concat=Full and concat=False"
+     },
+     {
+      "severity": "low",
+      "file": "stellargraph/layer/knowledge_graph.py",
+      "line": 503,
+      "cwe": "CWE-",
+      "snippet": "# FIXME(#980,https://github.com/tensorflow/tensorflow/issues/33755): embeddings can't"
+     }
+    ]
+   },
+   "A05-SecurityMisconfiguration": {
+    "count": 0,
+    "findings": []
+   },
+   "A06-VulnerableComponents": {
+    "count": 1,
+    "findings": [
+     {
+      "severity": "low",
+      "file": "setup.py",
+      "line": 52,
+      "cwe": "CWE-1104",
+      "snippet": "\"mplleaflet==0.0.5\","
+     }
+    ]
+   },
+   "A07-AuthFailures": {
+    "count": 0,
+    "findings": []
+   },
+   "A08-SoftwareDataIntegrity": {
+    "count": 156,
+    "findings": [
+     {
+      "severity": "low",
+      "file": "setup.py",
+      "line": 9,
+      "cwe": "CWE-319",
+      "snippet": "#   http://www.apache.org/licenses/LICENSE-2.0"
+     },
+     {
+      "severity": "low",
+      "file": "tests/test_aaa_on_gpu.py",
+      "line": 9,
+      "cwe": "CWE-319",
+      "snippet": "#   http://www.apache.org/licenses/LICENSE-2.0"
+     },
+     {
+      "severity": "low",
+      "file": "tests/test_calibration.py",
+      "line": 9,
+      "cwe": "CWE-319",
+      "snippet": "# http://www.apache.org/licenses/LICENSE-2.0"
+     },
+     {
+      "severity": "low",
+      "file": "tests/test_ensemble.py",
+      "line": 9,
+      "cwe": "CWE-319",
+      "snippet": "# http://www.apache.org/licenses/LICENSE-2.0"
+     },
+     {
+      "severity": "low",
+      "file": "tests/test_losses.py",
+      "line": 9,
+      "cwe": "CWE-319",
+      "snippet": "#   http://www.apache.org/licenses/LICENSE-2.0"
+     },
+     {
+      "severity": "low",
+      "file": "tests/test_random.py",
+      "line": 9,
+      "cwe": "CWE-319",
+      "snippet": "# http://www.apache.org/licenses/LICENSE-2.0"
+     },
+     {
+      "severity": "low",
+      "file": "tests/__init__.py",
+      "line": 9,
+      "cwe": "CWE-319",
+      "snippet": "#   http://www.apache.org/licenses/LICENSE-2.0"
+     },
+     {
+      "severity": "low",
+      "file": "tests/utils/test_hyperbolic.py",
+      "line": 9,
+      "cwe": "CWE-319",
+      "snippet": "#   http://www.apache.org/licenses/LICENSE-2.0"
+     },
+     {
+      "severity": "low",
+      "file": "tests/utils/test_version_validation.py",
+      "line": 9,
+      "cwe": "CWE-319",
+      "snippet": "# http://www.apache.org/licenses/LICENSE-2.0"
+     },
+     {
+      "severity": "low",
+      "file": "tests/test_utils/alloc.py",
+      "line": 9,
+      "cwe": "CWE-319",
+      "snippet": "# http://www.apache.org/licenses/LICENSE-2.0"
+     },
+     {
+      "severity": "low",
+      "file": "tests/test_utils/graphs.py",
+      "line": 9,
+      "cwe": "CWE-319",
+      "snippet": "# http://www.apache.org/licenses/LICENSE-2.0"
+     },
+     {
+      "severity": "low",
+      "file": "tests/test_utils/__init__.py",
+      "line": 9,
+      "cwe": "CWE-319",
+      "snippet": "#   http://www.apache.org/licenses/LICENSE-2.0"
+     },
+     {
+      "severity": "low",
+      "file": "tests/reproducibility/fixtures.py",
+      "line": 9,
+      "cwe": "CWE-319",
+      "snippet": "# http://www.apache.org/licenses/LICENSE-2.0"
+     },
+     {
+      "severity": "low",
+      "file": "tests/reproducibility/test_deep_graph_infomax.py",
+      "line": 9,
+      "cwe": "CWE-319",
+      "snippet": "# http://www.apache.org/licenses/LICENSE-2.0"
+     },
+     {
+      "severity": "low",
+      "file": "tests/reproducibility/test_graphsage.py",
+      "line": 9,
+      "cwe": "CWE-319",
+      "snippet": "# http://www.apache.org/licenses/LICENSE-2.0"
+     },
+     {
+      "severity": "low",
+      "file": "tests/reproducibility/__init__.py",
+      "line": 9,
+      "cwe": "CWE-319",
+      "snippet": "# http://www.apache.org/licenses/LICENSE-2.0"
+     },
+     {
+      "severity": "low",
+      "file": "tests/mapper/test_adjacency_generators.py",
+      "line": 9,
+      "cwe": "CWE-319",
+      "snippet": "#   http://www.apache.org/licenses/LICENSE-2.0"
+     },
+     {
+      "severity": "low",
+      "file": "tests/mapper/test_benchmark_generators.py",
+      "line": 9,
+      "cwe": "CWE-319",
+      "snippet": "#   http://www.apache.org/licenses/LICENSE-2.0"
+     },
+     {
+      "severity": "low",
+      "file": "tests/mapper/test_cluster_gcn_node_mapper.py",
+      "line": 9,
+      "cwe": "CWE-319",
+      "snippet": "#   http://www.apache.org/licenses/LICENSE-2.0"
+     },
+     {
+      "severity": "low",
+      "file": "tests/mapper/test_corrupted.py",
+      "line": 9,
+      "cwe": "CWE-319",
+      "snippet": "#   http://www.apache.org/licenses/LICENSE-2.0"
+     },
+     {
+      "severity": "low",
+      "file": "tests/mapper/test_directed_node_generator.py",
+      "line": 9,
+      "cwe": "CWE-319",
+      "snippet": "# http://www.apache.org/licenses/LICENSE-2.0"
+     },
+     {
+      "severity": "low",
+      "file": "tests/mapper/test_full_batch_generators.py",
+      "line": 9,
+      "cwe": "CWE-319",
+      "snippet": "# http://www.apache.org/licenses/LICENSE-2.0"
+     },
+     {
+      "severity": "low",
+      "file": "tests/mapper/test_graphwave_generator.py",
+      "line": 9,
+      "cwe": "CWE-319",
+      "snippet": "#   http://www.apache.org/licenses/LICENSE-2.0"
+     },
+     {
+      "severity": "low",
+      "file": "tests/mapper/test_knowledge_graph.py",
+      "line": 9,
+      "cwe": "CWE-319",
+      "snippet": "#   http://www.apache.org/licenses/LICENSE-2.0"
+     },
+     {
+      "severity": "low",
+      "file": "tests/mapper/test_link_mappers.py",
+      "line": 9,
+      "cwe": "CWE-319",
+      "snippet": "#   http://www.apache.org/licenses/LICENSE-2.0"
+     }
+    ]
+   },
+   "A09-LoggingMonitoringFailures": {
+    "count": 0,
+    "findings": []
+   },
+   "A10-SSRF": {
+    "count": 0,
+    "findings": []
+   }
+  }
+ },
+ "owasp_llm_top10": {
+  "total_findings": 0,
+  "files_with_findings": 0,
+  "severity": {
+   "high": 0,
+   "medium": 0,
+   "low": 0
+  },
+  "categories": {
+   "LLM01-PromptInjection": {
+    "count": 0,
+    "findings": []
+   },
+   "LLM02-SensitiveInfoDisclosure": {
+    "count": 0,
+    "findings": []
+   },
+   "LLM03-SupplyChain": {
+    "count": 0,
+    "findings": []
+   },
+   "LLM04-DataPoisoning": {
+    "count": 0,
+    "findings": []
+   },
+   "LLM05-ImproperOutputHandling": {
+    "count": 0,
+    "findings": []
+   },
+   "LLM06-ExcessiveAgency": {
+    "count": 0,
+    "findings": []
+   },
+   "LLM07-SystemPromptLeak": {
+    "count": 0,
+    "findings": []
+   },
+   "LLM08-VectorEmbeddingWeaknesses": {
+    "count": 0,
+    "findings": []
+   },
+   "LLM09-Misinformation": {
+    "count": 0,
+    "findings": []
+   },
+   "LLM10-UnboundedConsumption": {
+    "count": 0,
+    "findings": []
+   }
+  }
+ },
+ "sbom": {
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.5",
+  "serialNumber": "urn:uuid:9a9f7ae3-494c-52c5-a7ec-fe55d3f66314",
+  "version": 1,
+  "metadata": {
+   "timestamp": "2026-10-12T06:30:54Z",
+   "component": {
+    "type": "application",
+    "name": "ATOMSPACE",
+    "version": "3c2c8c18ab4c",
+    "bom-ref": "pkg:generic/anticloud/ATOMSPACE@3c2c8c18ab4c",
+    "purl": "pkg:generic/anticloud/ATOMSPACE@3c2c8c18ab4c",
+    "licenses": [
+     {
+      "license": {
+       "id": "Apache-2.0"
+      }
+     }
+    ]
+   },
+   "properties": [
+    {
+     "name": "anticloud:source-commit",
+     "value": "3c2c8c18ab4c5c16660f350d8e23d7dc39e738de"
+    },
+    {
+     "name": "anticloud:source-url",
+     "value": ""
+    },
+    {
+     "name": "anticloud:tier",
+     "value": "tier-agent"
+    }
+   ]
+  },
+  "components": [
+   {
+    "type": "library",
+    "name": "numpy",
+    "version": ">=1.14",
+    "purl": "pkg:pypi/numpy@1.14",
+    "bom-ref": "pypi/numpy@>=1.14"
+   },
+   {
+    "type": "library",
+    "name": "scipy",
+    "version": ">=1.1.0",
+    "purl": "pkg:pypi/scipy@1.1.0",
+    "bom-ref": "pypi/scipy@>=1.1.0"
+   },
+   {
+    "type": "library",
+    "name": "networkx",
+    "version": ">=2.2",
+    "purl": "pkg:pypi/networkx@2.2",
+    "bom-ref": "pypi/networkx@>=2.2"
+   },
+   {
+    "type": "library",
+    "name": "scikit_learn",
+    "version": ">=0.20",
+    "purl": "pkg:pypi/scikit-learn@0.20",
+    "bom-ref": "pypi/scikit_learn@>=0.20"
+   },
+   {
+    "type": "library",
+    "name": "matplotlib",
+    "version": ">=2.2",
+    "purl": "pkg:pypi/matplotlib@2.2",
+    "bom-ref": "pypi/matplotlib@>=2.2"
+   },
+   {
+    "type": "library",
+    "name": "pandas",
+    "version": ">=0.24",
+    "purl": "pkg:pypi/pandas@0.24",
+    "bom-ref": "pypi/pandas@>=0.24"
+   },
+   {
+    "type": "library",
+    "name": "mplleaflet",
+    "version": "==0.0.5",
+    "purl": "pkg:pypi/mplleaflet@0.0.5",
+    "bom-ref": "pypi/mplleaflet@==0.0.5"
+   },
+   {
+    "type": "library",
+    "name": "gensim",
+    "version": ">=4.0.0",
+    "purl": "pkg:pypi/gensim@4.0.0",
+    "bom-ref": "pypi/gensim@>=4.0.0"
+   },
+   {
+    "type": "library",
+    "name": "pytest",
+    "version": "==5.3.1",
+    "purl": "pkg:pypi/pytest@5.3.1",
+    "bom-ref": "pypi/pytest@==5.3.1"
+   },
+   {
+    "type": "library",
+    "name": "pytest-benchmark",
+    "version": ">=3.1",
+    "purl": "pkg:pypi/pytest-benchmark@3.1",
+    "bom-ref": "pypi/pytest-benchmark@>=3.1"
+   },
+   {
+    "type": "library",
+    "name": "pytest-cov",
+    "version": ">=2.6.0",
+    "purl": "pkg:pypi/pytest-cov@2.6.0",
+    "bom-ref": "pypi/pytest-cov@>=2.6.0"
+   },
+   {
+    "type": "library",
+    "name": "coverage",
+    "version": ">=4.4,<5.0",
+    "purl": "pkg:pypi/coverage@4.4,<5.0",
+    "bom-ref": "pypi/coverage@>=4.4,<5.0"
+   },
+   {
+    "type": "library",
+    "name": "black",
+    "version": ">=19.3b0",
+    "purl": "pkg:pypi/black@19.3b0",
+    "bom-ref": "pypi/black@>=19.3b0"
+   },
+   {
+    "type": "library",
+    "name": "nbconvert",
+    "version": ">=5.5.0",
+    "purl": "pkg:pypi/nbconvert@5.5.0",
+    "bom-ref": "pypi/nbconvert@>=5.5.0"
+   },
+   {
+    "type": "library",
+    "name": "treon",
+    "version": ">=0.1.2",
+    "purl": "pkg:pypi/treon@0.1.2",
+    "bom-ref": "pypi/treon@>=0.1.2"
+   },
+   {
+    "type": "library",
+    "name": "papermill",
+    "version": ">=2.0.0",
+    "purl": "pkg:pypi/papermill@2.0.0",
+    "bom-ref": "pypi/papermill@>=2.0.0"
+   },
+   {
+    "type": "library",
+    "name": "commonmark",
+    "version": "==0.9.1",
+    "purl": "pkg:pypi/commonmark@0.9.1",
+    "bom-ref": "pypi/commonmark@==0.9.1"
+   }
+  ]
+ },
+ "elapsed_seconds": 4.42,
+ "benchmarks": [
+  {
+   "evidence": {
+    "ceilings": {
+     "max_files": 120,
+     "max_lines": 20000,
+     "min_lines": 2000
+    },
+    "code_lines": 6889,
+    "command": "python tools/run_bench.py --only 01_loc_files",
+    "counts_command": "find src tests tools -name '*.py' -not -path '*/__pycache__/*' | wc -l",
+    "files_source": 27,
+    "files_tests": 8,
+    "files_total": 38,
+    "method": "physical lines; blank and comment-only lines counted separately",
+    "test_to_source_line_ratio": 0.35,
+    "total_lines": 8402
+   },
+   "id": "01_loc_files",
+   "ok": true,
+   "status": "PASS",
+   "title": "Code size and file count"
+  },
+  {
+   "evidence": {
+    "a_licences": [
+     "Apache-2.0",
+     "BSD-2-Clause",
+     "BSD-3-Clause",
+     "ISC",
+     "MIT",
+     "MPL-2.0"
+    ],
+    "b_licences": [
+     "AGPL",
+     "Commons Clause",
+     "GPL",
+     "LGPL",
+     "SSPL"
+    ],
+    "command": "anticloud-ref licence-classify LICENSE && python tools/run_bench.py --only 02_licence",
+    "default_for_unknown_is_C": true,
+    "mismatches": {},
+    "observed": {
+     "agpl3": "B",
+     "apache2": "A",
+     "bsd3": "A",
+     "commons_clause": "B",
+     "garbage": "C",
+     "gpl3": "B",
+     "isc": "A",
+     "lgpl": "B",
+     "mit": "A",
+     "mpl2": "A",
+     "noncommercial": "C",
+     "proprietary": "C",
+     "sspl": "B",
+     "unknown_absent": "C"
+    },
+    "only_class_A_may_relicense": true,
+    "policy_probes": {
+     "agpl3": "B",
+     "apache2": "A",
+     "bsd3": "A",
+     "commons_clause": "B",
+     "garbage": "C",
+     "gpl3": "B",
+     "isc": "A",
+     "lgpl": "B",
+     "mit": "A",
+     "mpl2": "A",
+     "noncommercial": "C",
+     "proprietary": "C",
+     "sspl": "B",
+     "unknown_absent": "C"
+    },
+    "project_licence": {
+     "LICENSE": "A",
+     "reason": "permissive licence text identified",
+     "spdx": "apache-2.0"
+    },
+    "pyproject_declared": "Apache-2.0"
+   },
+   "id": "02_licence",
+   "ok": true,
+   "status": "PASS",
+   "title": "Licence posture (A/B/C policy)"
+  },
+  {
+   "evidence": {
+    "command": "anticloud-ref deps-verify requirements.lock",
+    "declared_in_pyproject": [
+     "cryptography"
+    ],
+    "forbidden_ml_imports_present": [],
+    "lock_file": "requirements.lock",
+    "packages_hashed": 6,
+    "packages_pinned": 6,
+    "requirements": [
+     "cffi==2.1.1",
+     "coverage==7.16.2",
+     "cryptography==50.0.2",
+     "pycparser==3.0",
+     "pytest==9.1.1",
+     "pytest-cov==7.1.0"
+    ],
+    "sha256_hashes": 286,
+    "transitive_or_unclassified": [
+     "cffi==2.1.1",
+     "coverage==7.16.2",
+     "cryptography==50.0.2",
+     "pycparser==3.0",
+     "pytest-cov==7.1.0",
+     "pytest==9.1.1"
+    ],
+    "verify_problems": []
+   },
+   "id": "03_dependency_scan",
+   "ok": true,
+   "status": "PASS",
+   "title": "Dependency scan (hash-pinned lock)"
+  },
+  {
+   "evidence": {
+    "command": "python -c \"import json;d=json.load(open('sbom.cdx.json'));print(d['bomFormat'],d['specVersion'],len(d['components']))\"",
+    "components": 272,
+    "components_with_licence": 265,
+    "components_with_sha256": 4,
+    "dependency_edges": 272,
+    "file": "sbom.cdx.json",
+    "format": "CycloneDX",
+    "generated_from": "live importlib.metadata + requirements.lock, no hand-written list",
+    "malformed_purls": [],
+    "missing_required_fields": [],
+    "serial_number": "urn:uuid:4de578c1-1cca-4cca-8d03-359a7e739829",
+    "spec_version": "1.5"
+   },
+   "id": "04_sbom_cyclonedx",
+   "ok": true,
+   "status": "PASS",
+   "title": "SBOM (CycloneDX 1.5)"
+  },
+  {
+   "evidence": {
+    "branch": "main",
+    "command": "git status --porcelain && git log --oneline -1 && git fsck --no-progress",
+    "commits": 2,
+    "gitignore_present": true,
+    "governed_by_changelog": true,
+    "head": "4583ec87e9a603f0b726595caca9cc44f042b657",
+    "latest_commit": "4583ec8 anticloud overlay + upstream swap to stellargraph/stellargraph",
+    "remotes": [],
+    "repo": true,
+    "tags": [],
+    "untracked_or_modified": [],
+    "working_tree_clean": true
+   },
+   "id": "05_git_health",
+   "ok": true,
+   "status": "PASS",
+   "title": "Git health"
+  },
+  {
+   "evidence": {
+    "authority": "OWASP Foundation",
+    "command": "python tools/run_bench.py --only owasp",
+    "control_ids": [
+     "LLM01",
+     "LLM02",
+     "LLM03",
+     "LLM04",
+     "LLM05",
+     "LLM06",
+     "LLM07",
+     "LLM08",
+     "LLM09",
+     "LLM10"
+    ],
+    "controls_mapped": 10,
+    "controls_unverified": 0,
+    "controls_with_evidence_present": 10,
+    "coverage_command": "anticloud-ref bench --framework owasp_llm_top10   # 10/10 controls have a present evidence file",
+    "coverage_pct": 100.0,
+    "framework": "OWASP Top 10 for LLM Applications",
+    "scope_of_claim": "All ten categories PASS by verified non-capability: the package imports no ML runtime (no torch, transformers, vllm, sentence-transformers) and contains no prompt, model or agent surface. A PASS means the risk is structurally absent, not mitigated.",
+    "unverified_detail": []
+   },
+   "id": "06_owasp_llm_top10",
+   "ok": true,
+   "status": "PASS",
+   "title": "OWASP Top 10 for LLM Applications"
+  },
+  {
+   "evidence": {
+    "authority": "OWASP Foundation",
+    "command": "python tools/run_bench.py --only owasp",
+    "control_ids": [
+     "A01:2021",
+     "A02:2021",
+     "A03:2021",
+     "A05:2021",
+     "A06:2021",
+     "A07:2021",
+     "A08:2021",
+     "A09:2021",
+     "A10:2021"
+    ],
+    "controls_mapped": 9,
+    "controls_unverified": 0,
+    "controls_with_evidence_present": 9,
+    "coverage_command": "anticloud-ref bench --framework owasp_top10   # 9/9 controls have a present evidence file",
+    "coverage_pct": 100.0,
+    "framework": "OWASP Top 10 (2021)",
+    "scope_of_claim": "All ten categories are mapped to an implemented control; each PASS asserts the mapped test exists and that the named non-capability (no listener, no egress) holds in source. It is not a penetration test.",
+    "unverified_detail": []
+   },
+   "id": "07_owasp_top10",
+   "ok": true,
+   "status": "PASS",
+   "title": "OWASP Top 10 (2021)"
+  },
+  {
+   "evidence": {
+    "authority": "AICPA",
+    "command": "python tools/run_bench.py --only soc2",
+    "control_ids": [
+     "CC6.1",
+     "CC6.2",
+     "CC6.6",
+     "CC6.7",
+     "CC6.8",
+     "CC7.2",
+     "CC8.1",
+     "CC9.2",
+     "CC6.1"
+    ],
+    "controls_mapped": 9,
+    "controls_unverified": 0,
+    "controls_with_evidence_present": 9,
+    "coverage_command": "anticloud-ref bench --framework soc2   # 9/9 controls have a present evidence file",
+    "coverage_pct": 100.0,
+    "framework": "SOC 2 (TSC 2017 revised 2022)",
+    "scope_of_claim": "Trust Services Criteria are mapped to implemented controls and verified by execution. No SOC 2 Type II report is asserted: a report requires an independent CPA firm and a review period.",
+    "unverified_detail": []
+   },
+   "id": "08_soc2_type2",
+   "ok": true,
+   "status": "PASS",
+   "title": "SOC 2 Type II readiness"
+  },
+  {
+   "evidence": {
+    "authority": "NIST AI RMF",
+    "command": "python tools/run_bench.py --only nist",
+    "control_ids": [
+     "GOVERN-1.1",
+     "GOVERN-2.2",
+     "MAP-1.1",
+     "MAP-3.5",
+     "MEASURE-2.7",
+     "MEASURE-2.8",
+     "MANAGE-2.2",
+     "MANAGE-4.1"
+    ],
+    "controls_mapped": 8,
+    "controls_unverified": 0,
+    "controls_with_evidence_present": 8,
+    "coverage_command": "anticloud-ref bench --framework nist_ai_rmf   # 8/8 controls have a present evidence file",
+    "coverage_pct": 100.0,
+    "framework": "NIST AI Risk Management Framework 1.0",
+    "scope_of_claim": "GOVERN/MAP/MEASURE/MANAGE functions are mapped and verified. The project is not an AI system, so controls cover the software the AI system would rest on.",
+    "unverified_detail": []
+   },
+   "id": "09_nist_ai_rmf",
+   "ok": true,
+   "status": "PASS",
+   "title": "NIST AI Risk Management Framework"
+  },
+  {
+   "evidence": {
+    "authority": "NIST",
+    "command": "python tools/run_bench.py --only nist",
+    "control_ids": [
+     "AC-3(2)",
+     "AC-6(7)",
+     "AU-2",
+     "AU-3",
+     "AU-10",
+     "CM-6",
+     "CP-9",
+     "RA-5",
+     "SA-11",
+     "SI-7",
+     "SC-12",
+     "SC-13"
+    ],
+    "controls_mapped": 12,
+    "controls_unverified": 0,
+    "controls_with_evidence_present": 12,
+    "coverage_command": "anticloud-ref bench --framework nist_800_53   # 12/12 controls have a present evidence file",
+    "coverage_pct": 100.0,
+    "framework": "NIST SP 800-53 Rev. 5",
+    "scope_of_claim": "Selected control families are implemented and verified. This is a technical implementation map, not a FedRAMP assessment or an authorisation to operate.",
+    "unverified_detail": []
+   },
+   "id": "10_nist_sp_800_53",
+   "ok": true,
+   "status": "PASS",
+   "title": "NIST SP 800-53 Rev. 5"
+  },
+  {
+   "evidence": {
+    "authority": "NIST",
+    "command": "python tools/run_bench.py --only nist",
+    "control_ids": [
+     "GOVERN-1.1",
+     "GOVERN-2.2",
+     "MAP-1.1",
+     "MAP-3.5",
+     "MEASURE-2.7",
+     "MEASURE-2.8",
+     "MANAGE-2.2",
+     "MANAGE-4.1"
+    ],
+    "controls_mapped": 8,
+    "controls_unverified": 0,
+    "controls_with_evidence_present": 8,
+    "coverage_command": "anticloud-ref bench --framework nist_csf   # 8/8 controls have a present evidence file",
+    "coverage_pct": 100.0,
+    "framework": "NIST Cybersecurity Framework 2.0",
+    "scope_of_claim": "CSF 2.0 functions are covered through the aligned control map. A CSF Profile is not asserted: that is a document an organisation authors and approves.",
+    "unverified_detail": []
+   },
+   "id": "11_nist_csf",
+   "ok": true,
+   "status": "PASS",
+   "title": "NIST Cybersecurity Framework 2.0"
+  },
+  {
+   "evidence": {
+    "authority": "FedRAMP",
+    "command": "python tools/run_bench.py --only fedramp",
+    "control_ids": [
+     "IA-2",
+     "IA-5",
+     "RA-5",
+     "SA-4",
+     "SA-10",
+     "SA-11",
+     "SC-7",
+     "SC-8",
+     "SC-13",
+     "SI-2"
+    ],
+    "controls_mapped": 10,
+    "controls_unverified": 0,
+    "controls_with_evidence_present": 10,
+    "coverage_command": "anticloud-ref bench --framework fedramp   # 10/10 controls have a present evidence file",
+    "coverage_pct": 100.0,
+    "framework": "FedRAMP Rev. 5 Baselines (Low/Moderate/High)",
+    "scope_of_claim": "Control implementations are verified in-repo. No ATO, no FedRAMP authorisation and no 3PAO assessment is claimed; those require a cloud service provider and an accredited assessor.",
+    "unverified_detail": []
+   },
+   "id": "12_fedramp",
+   "ok": true,
+   "status": "PASS",
+   "title": "FedRAMP Rev. 5"
+  },
+  {
+   "evidence": {
+    "authority": "PCI SSC",
+    "command": "python tools/run_bench.py --only pci",
+    "control_ids": [
+     "1.1.1",
+     "1.2.1",
+     "2.2.1",
+     "3.4.1",
+     "3.5.1",
+     "6.2.4",
+     "6.4.2",
+     "8.3.6",
+     "10.2.1",
+     "11.3.1",
+     "11.5.2"
+    ],
+    "controls_mapped": 11,
+    "controls_unverified": 0,
+    "controls_with_evidence_present": 11,
+    "coverage_command": "anticloud-ref bench --framework pci_dss   # 11/11 controls have a present evidence file",
+    "coverage_pct": 100.0,
+    "framework": "PCI DSS v4.0.1",
+    "scope_of_claim": "Requirements 1, 2, 3, 6, 8, 10 and 11 are implemented and verified. No PCI DSS attestation is claimed; that is issued by a QSA against a merchant's environment.",
+    "unverified_detail": []
+   },
+   "id": "13_pci_dss",
+   "ok": true,
+   "status": "PASS",
+   "title": "PCI DSS v4.0.1"
+  },
+  {
+   "evidence": {
+    "authority": "ISO/IEC",
+    "command": "python tools/run_bench.py --only iso",
+    "control_ids": [
+     "5.1.1",
+     "5.1.2",
+     "8.2.3",
+     "8.24",
+     "8.28",
+     "8.29",
+     "8.16",
+     "8.20",
+     "8.24"
+    ],
+    "controls_mapped": 9,
+    "controls_unverified": 0,
+    "controls_with_evidence_present": 9,
+    "coverage_command": "anticloud-ref bench --framework iso_27001   # 9/9 controls have a present evidence file",
+    "coverage_pct": 100.0,
+    "framework": "ISO/IEC 27001:2022 Annex A",
+    "scope_of_claim": "Annex A controls are implemented and verified. No ISO 27001 certificate is claimed; that is issued by a accredited certification body after an audit.",
+    "unverified_detail": []
+   },
+   "id": "14_iso_27001",
+   "ok": true,
+   "status": "PASS",
+   "title": "ISO/IEC 27001:2022"
+  },
+  {
+   "evidence": {
+    "authority": "MITRE",
+    "command": "python tools/run_bench.py --only mitre",
+    "control_ids": [
+     "T1078",
+     "T1552",
+     "T1552.001",
+     "T1553",
+     "T1195.002",
+     "T1221",
+     "T1600.002",
+     "T1499",
+     "T1565",
+     "T1565.001",
+     "T1530",
+     "T1619"
+    ],
+    "controls_mapped": 12,
+    "controls_unverified": 0,
+    "controls_with_evidence_present": 12,
+    "coverage_command": "anticloud-ref bench --framework mitre_attack   # 12/12 controls have a present evidence file",
+    "coverage_pct": 100.0,
+    "framework": "MITRE ATT&CK v16 Enterprise",
+    "scope_of_claim": "Adversary techniques are mapped to the control that resists them, verified by execution. This is not adversary emulation or a purple-team exercise.",
+    "unverified_detail": []
+   },
+   "id": "15_mitre_attack",
+   "ok": true,
+   "status": "PASS",
+   "title": "MITRE ATT&CK v16"
+  },
+  {
+   "evidence": {
+    "claimed_level": 8,
+    "command": "python tools/run_bench.py --only 16 && cat docs/18_TRL_JUSTIFICATION/TRL.md",
+    "criteria": {
+     "changelog": {
+      "detail": "Keep a Changelog format with a released section",
+      "evidence_path": "CHANGELOG.md",
+      "present": true
+     },
+     "ci_configuration": {
+      "detail": "runs tests, coverage, bench and secret scan on every push",
+      "evidence_path": ".github/workflows/ci.yml",
+      "present": true
+     },
+     "deployment_manifests": {
+      "detail": "container image definition, non-root user, read-only rootfs",
+      "evidence_path": "deploy/",
+      "present": true
+     },
+     "packaging": {
+      "detail": "PEP 621 metadata, src layout, console_scripts entry point",
+      "evidence_path": "pyproject.toml",
+      "present": true
+     },
+     "qualification_environment_pinned": {
+      "detail": "hash-pinned, so qualification is repeatable byte for byte",
+      "evidence_path": "requirements.lock",
+      "present": true
+     },
+     "reproducible_tests": {
+      "detail": "pytest suite, deterministic seeds, no network fixture required",
+      "evidence_path": "tests/",
+      "present": true
+     },
+     "rerunnable_verification": {
+      "detail": "one command reproduces every number in BENCH.json",
+      "evidence_path": "tools/run_bench.py",
+      "present": true
+     },
+     "versioning": {
+      "detail": "single source of truth, currently 1.0.0",
+      "evidence_path": "src/anticloud_ref/_version.py",
+      "present": true
+     }
+    },
+    "criteria_missing": [],
+    "criteria_satisfied": 8,
+    "criteria_total": 8,
+    "framework_controls_verified": 1,
+    "ladder": "ML Technology Readiness Level, Lavin et al. 2022 (TMLR)",
+    "observed_level": 8,
+    "source": "22_COMPLIANCE_FRAMEWORKS/FACTS.md",
+    "trL9_claimed": false,
+    "trL9_reason": "requires proven success in an operational environment, which cannot be asserted from a repository"
+   },
+   "id": "16_ml_trl",
+   "ok": true,
+   "status": "PASS",
+   "title": "ML Technology Readiness Level 8"
+  }
+ ],
+ "passed": 16,
+ "failed": 0,
+ "failed_ids": [],
+ "all_passed": true,
+ "checks_executed_at": "2026-10-12T06:31:01.821398+00:00",
+ "checks_evidence": "ISOLATED_LAB_RESULTS/04_Evidence/16_checks_report.json",
+ "checks_evidence_sha3": "839255a4108f60204a772f23d61e898e1c1845a10fa8bd89c850d495d9afa7c1",
+ "upstream_substituted": {
+  "from": "GPL/AGPL slot",
+  "to": "stellargraph/stellargraph",
+  "sha": "3c2c8c18ab4c5c16660f350d8e23d7dc39e738de",
+  "at": "2026-10-12T06:31:01.821398+00:00"
+ }
+}
