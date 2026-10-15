@@ -1,36 +1,30 @@
 # ATOMSPACE
 
-> **StellarGraph** is a Python library for machine learning on [graphs and networks](https://en.wikipedia.org/wiki/Graph_%28discrete_mathematics%29).
+> OpenCog AtomSpace The OpenCog AtomSpace is an in-RAM knowledge representation (KR) database with an associated query engine and graph-re-writing system. It is a kind of in-RAM generalized hypergraph (metagraph) database. Metagraphs offer more efficient, more flexible and more powerful ways of representing graphs: [a metagraph store is literally just-plain better than a graph store.](https://github.com/opencog/atomspace/blob/master/opencog/sheaf/docs/ram-cpu.pdf) On top of this, the Atomspace provides a large variety of advanced
 
-**Category:** PHILOSOPHY_SEMANTICS · **Ecosystem:** unknown · **Vendored upstream:** https://github.com/stellargraph/stellargraph · **Pinned commit:** `3c2c8c18ab4c5c16660f350d8e23d7dc39e738de` · **Vendor:** Anticloud FZ LLE
-
-> **Note:** this package vendors `https://github.com/stellargraph/stellargraph` as the implementation for the `ATOMSPACE` slot. The vendored repository name differs from the package name; the pin above is the exact commit vendored here.
+**Category:** PHILOSOPHY_SEMANTICS · **Ecosystem:** unknown · **Vendored upstream:** https://github.com/opencog/atomspace · **Pinned commit:** `c8d633bf272b838c2132c21b7c8ddf169a18dd22` · **Vendor:** Anticloud FZ LLE
 
 ## What This Project Is
 
-**StellarGraph** is a Python library for machine learning on [graphs and networks](https://en.wikipedia.org/wiki/Graph_%28discrete_mathematics%29).
+OpenCog AtomSpace The OpenCog AtomSpace is an in-RAM knowledge representation (KR) database with an associated query engine and graph-re-writing system. It is a kind of in-RAM generalized hypergraph (metagraph) database. Metagraphs offer more efficient, more flexible and more powerful ways of representing graphs: [a metagraph store is literally just-plain better than a graph store.](https://github.com/opencog/atomspace/blob/master/opencog/sheaf/docs/ram-cpu.pdf) On top of this, the Atomspace provides a large variety of advanced
 
 This is the upstream project, vendored at the pinned commit above and packaged offline-first. The 12 improvements Anticloud adds live in `anticloud/` and are described under *Anticloud Overlay* below. Every fact in this file traces to a file in this directory.
 
 ## Installation
 
-[The numerous detailed and narrated examples][demos] are a good way to get started with StellarGraph. There is likely to be one that is similar to your data or your problem (if not, [let us know](#getting-help)).
-
-[demos]: https://stellargraph.readthedocs.io/en/stable/demos/index.html
-
-You can start working with the examples immediately in Google Colab or Binder by clicking the ![](https://colab.research.google.com/assets/colab-badge.svg) and ![](https://mybinder.org/badge_logo.svg) badges within each Jupyter notebook.
-
-Alternatively, you can run download a local copy of the demos and run them using `jupyter`. The demos can be downloaded by cloning the `master` branch of this repository, or by using the `curl` command below:
-```bash
-curl -L https://github.com/stellargraph/stellargraph/archive/master.zip | tar -xz --strip=1 stellargraph-master/demos
+Be sure to install the pre-requisites first!
+Perform the following steps at the shell prompt:
 ```
-
-The dependencies required to run most of our demo notebooks locally can be installed using one of the following:
-
-- Using `pip`: `pip install stellargraph[demos]`
-- Using `conda`: `conda install -c stellargraph stellargraph`
-
-(See [Installation](#installation) section for more details and more options.)
+    cd to project root dir
+    mkdir build
+    cd build
+    cmake ..
+    make -j
+    sudo make install
+    make -j check ARGS=-j
+```
+Libraries will be built into subdirectories within build, mirroring
+the structure of the source directory root.
 
 ## Usage
 
@@ -76,7 +70,7 @@ The upstream licence is preserved in `LICENSE` and `THIRD_PARTY_LICENSES/`. The 
 SHA3-256 of `BENCH.json`:
 
 ```
-3f7757c94144b793ab55678a236026a758d21beaac0ca573550f6d5d7e8a8071
+34b490675029cae63c20d453ff5cf16c165a57a0c661f8cab8462e8cd6aa56d9
 ```
 
 Recompute the hash above and compare — any drift means the package has been tampered with and the seal is invalid. This is a self-assessment; no external audit has been performed and a SOC 2 / NIST independent audit is committed post-funding.

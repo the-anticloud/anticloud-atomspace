@@ -2,13 +2,11 @@
  "schema": "anticloud.tier-bench/1",
  "project": "ATOMSPACE",
  "source": {
-  "repo_path": "E:\\fenta\\Downloads\\The Anticloud\\ANTICLOUD_REPOS\\PHILOSOPHY_SEMANTICS\\ATOMSPACE\\UPSTREAM_CLONE",
   "git": {
-   "head": "3c2c8c18ab4c5c16660f350d8e23d7dc39e738de",
-   "url": "https://github.com/stellargraph/stellargraph",
-   "branch": "develop",
-   "committed_at": "",
-   "sha_verified_from": "GitHub API substitute swap 2026-10-12 | unified 2026-10-14 (API-exists + content/clone anchor)"
+   "url": "https://github.com/opencog/atomspace",
+   "head": "c8d633bf272b838c2132c21b7c8ddf169a18dd22",
+   "sha_verified_from": "revendor 2026-10-15: GitHub API commit lookup",
+   "previous_substitute": "https://github.com/stellargraph/stellargraph"
   }
  },
  "metrics": {
