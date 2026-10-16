@@ -6,7 +6,7 @@
    "url": "https://github.com/opencog/atomspace",
    "head": "c8d633bf272b838c2132c21b7c8ddf169a18dd22",
    "sha_verified_from": "revendor 2026-10-15: GitHub API commit lookup",
-   "previous_substitute": "https://github.com/stellargraph/stellargraph"
+   "previous_substitute": "https://github.com/opencog/atomspace"
   }
  },
  "metrics": {
